@@ -1,0 +1,25 @@
+.about {
+  background-color: #f8f9fa; /* light gray background for section */
+  border-radius: 12px;
+  padding: 2rem;
+  margin-top: 2rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.about img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.about h2 {
+  color: #212529; /* dark text for heading */
+}
+
+.about p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}

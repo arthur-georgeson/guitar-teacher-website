@@ -1,10 +1,33 @@
-body {
+/* Ensure full height and flex layout */
+html, body, #root {
+  height: 100%;
   margin: 0;
+  padding: 0;
   font-family: Arial, sans-serif;
   background-color: #fafafa;
   color: #333;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.content {
+  flex: 1;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -35,48 +58,15 @@ body {
   text-decoration: underline;
 }
 
-.content {
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-}
-
+/* Footer */
 footer {
   text-align: center;
   padding: 1rem;
   background: #eee;
-  margin-top: 2rem;
+  margin-top: 0;
 }
 
-.booking-form {
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
-  max-width: 400px;
-  margin-top: 1rem;
-}
-
-.booking-form input,
-.booking-form textarea {
-  padding: 0.6rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font: inherit;
-}
-
-.booking-form button {
-  padding: 0.6rem;
-  background: #111;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.booking-form button:hover {
-  background: #333;
-}
-
+/* Call-to-action button */
 .cta-button {
   display: inline-block;
   margin-top: 1.5rem;
@@ -91,6 +81,7 @@ footer {
   background: #333;
 }
 
+/* Video grid for examples */
 .video-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -103,4 +94,15 @@ iframe {
   aspect-ratio: 16 / 9;
   border: none;
   border-radius: 6px;
+}
+/* Make the root div fill the viewport and use flexbox */
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* full viewport height */
+}
+
+/* Main content should expand to fill remaining space */
+.content {
+  flex: 1;
 }

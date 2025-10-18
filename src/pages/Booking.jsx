@@ -175,12 +175,12 @@ export default function Booking() {
                   Feel free to include any questions in the message field, or reach out directly:
                 </p>
                 
-                <div className="d-flex align-items-start mb-3">
+                <div className="d-flex align-items-start mb-3 flex-wrap">
                   <i className="bi bi-envelope-fill fs-4 me-3 mt-1"></i>
                   <div>
                     <small className="d-block mb-1" style={{opacity: 0.8}}>Email</small>
                     <a href="mailto:lessons@example.com" className="text-white text-decoration-none fw-semibold">
-                      lessons@example.com
+                      arthgeorgeson@gmail.com
                     </a>
                   </div>
                 </div>
@@ -190,7 +190,7 @@ export default function Booking() {
                   <div>
                     <small className="d-block mb-1" style={{opacity: 0.8}}>Phone</small>
                     <a href="tel:5551234567" className="text-white text-decoration-none fw-semibold">
-                      (555) 123-4567
+                      07952 276343
                     </a>
                   </div>
                 </div>

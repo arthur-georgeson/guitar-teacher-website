@@ -12,6 +12,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  font-size: 18px !important;
 }
 
 .App {
@@ -27,16 +28,35 @@ body {
   padding: 0 1rem;
 }
 
-/* Navbar */
+/* === Navbar Styling (Fonts & Colors Only) === */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Open+Sans:wght@400;600&display=swap');
+
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #111;
-  color: white;
-  padding: 1rem 2rem;
+  background: #111; /* keep dark header */
+  color: #fff;
+  padding: 1rem 2rem; /* unchanged */
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* subtle depth */
+  transition: background 0.3s ease;
 }
 
+.navbar a {
+  color: #fff; /* main link color */
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #0e5dd4; /* accent hover color */
+  text-decoration: underline; /* keep underline hover */
+}
+
+/* keep list spacing same */
 .navbar ul {
   display: flex;
   list-style: none;
@@ -48,23 +68,29 @@ body {
   margin-left: 1.5rem;
 }
 
-.navbar a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.navbar a:hover {
-  text-decoration: underline;
-}
-
-/* Footer */
+/* === Footer Styling (Fonts & Colors Only) === */
 footer {
   text-align: center;
   padding: 1rem;
-  background: #eee;
-  margin-top: 0;
+  background: #111; /* darker footer for consistency with navbar */
+  color: #eee; /* improved readability */
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: background 0.3s ease, color 0.3s ease;
 }
+
+/* Optional subtle hover for links in footer */
+footer a {
+  color: #ff6600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #fff;
+}
+
 
 /* Call-to-action button */
 .cta-button {
@@ -105,4 +131,14 @@ iframe {
 /* Main content should expand to fill remaining space */
 .content {
   flex: 1;
+}
+/* === Font Only Upgrade === */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Open+Sans:wght@400;600&display=swap');
+
+body {
+  font-family: 'Open Sans', sans-serif; /* body text font */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif; /* headings font */
 }

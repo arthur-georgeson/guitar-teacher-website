@@ -103,3 +103,42 @@
 .react-datepicker__input-container input {
   border-radius: 8px !important;
 }
+/* Make both cards the same height using flex */
+.row.g-4 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch; /* forces all columns to same height */
+}
+
+/* Contact card text adjustments */
+.contact-card p,
+.contact-card small,
+.contact-card a {
+  font-size: 0.9rem; /* slightly smaller to prevent overflow */
+}
+
+/* Adjust icons & spacing for smaller text */
+.contact-card i {
+  font-size: 1rem; /* slightly smaller */
+  margin-top: 0.15rem;
+}
+/* Booking page CTA button */
+.booking-btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #F3E2D4; /* light beige text */
+  background: #415E72; /* steel-blue background */
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+}
+
+.booking-btn:hover {
+  background-color: #17313E; /* deep navy hover */
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}

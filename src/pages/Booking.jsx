@@ -167,10 +167,10 @@ export default function Booking() {
           <div className="col-lg-5">
             <div className="card shadow border-0 h-100 contact-card">
               <div className="card-body p-4 p-md-5 d-flex flex-column justify-content-center">
-                <h3 className="mb-4 fw-bold">
+                <h4 className="mb-4 fw-bold">
                   <i className="bi bi-question-circle-fill me-2"></i>
                   Have Questions?
-                </h3>
+                </h4>
                 <p className="mb-4">
                   Feel free to include any questions in the message field, or reach out directly:
                 </p>
@@ -179,9 +179,10 @@ export default function Booking() {
                   <i className="bi bi-envelope-fill fs-4 me-3 mt-1"></i>
                   <div>
                     <small className="d-block mb-1" style={{opacity: 0.8}}>Email</small>
-                    <a href="mailto:lessons@example.com" className="text-white text-decoration-none fw-semibold">
-                      arthgeorgeson@gmail.com
-                    </a>
+                   <a href="mailto:lessons@example.com" className="text-white text-decoration-none fw-semibold">
+  arthgeorgeson<br />@gmail.com
+</a>
+
                   </div>
                 </div>
                 

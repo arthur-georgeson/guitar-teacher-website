@@ -1,26 +1,28 @@
 .services {
   padding: 2rem 1rem;
-  background-color: #f8f9fa;
+  background: linear-gradient(135deg, #F3E2D4, #C5B0CD); /* pastel gradient background */
   border-radius: 12px;
-  animation: fadeIn 0.8s ease-out; /* fade in the whole section */
+  animation: fadeIn 0.8s ease-out;
 }
 
 /* Headings */
 .services h2 {
-  color: #212529;
-  animation: fadeInDown 0.8s ease-out; /* animate from top */
+  color: #415E72; /* steel-blue for headings */
+  animation: fadeInDown 0.8s ease-out;
 }
 
-/* Cards with subtle animation on load and hover */
+/* Cards */
 .services .card {
   border-radius: 12px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  animation: fadeInUp 0.8s ease-out; /* animate from bottom */
+  animation: fadeInUp 0.8s ease-out;
+  background: rgba(255, 249, 239, 0.2); /* subtle transparent overlay */
+  border-left: 6px solid #415E72; /* steel-blue accent line */
 }
 
 .services .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 /* Buttons */
@@ -28,14 +30,17 @@
   border-radius: 50px;
   font-weight: 600;
   transition: all 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  color: #F3E2D4; /* light beige text */
+  background-color: #415E72; /* steel-blue background */
 }
 
 .services .btn:hover {
+  background-color: #17313E; /* deep navy hover */
   transform: translateY(-2px) scale(1.05);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
 }
 
-/* === Animations === */
+/* Animations */
 @keyframes fadeInDown {
   from {
     opacity: 0;

@@ -12,7 +12,8 @@ export default function App() {
   return (
     <div className="App">
       <header>
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+        <nav className="navbar navbar-expand-lg custom-navbar shadow-sm">
+
           <div className="container">
             {/* Navbar brand / title */}
             <Link className="navbar-brand d-flex align-items-center" to="/">
@@ -77,7 +78,8 @@ export default function App() {
         </Routes>
       </main>
 
-      <footer className="bg-dark text-white text-center py-3 mt-4">
+      <footer className="custom-footer text-center py-3 mt-4">
+
         <p className="mb-0">© {new Date().getFullYear()} Arthur’s Guitar Lessons</p>
       </footer>
     </div>

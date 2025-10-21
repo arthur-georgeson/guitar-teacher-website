@@ -1,23 +1,23 @@
-// server.js
+require("dotenv").config(); // Load .env variables
 const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const { google } = require("googleapis");
 const { JWT } = require("google-auth-library");
-const serviceAccount = require("./service-account.json"); // your key
 
 const app = express();
-const PORT = 4000;
+const PORT = process.env.PORT || 4000;
 
 app.use(cors());
 app.use(bodyParser.json());
 
-const calendarId = "arthgeorgeson@gmail.com"; // your calendar
+// --- Calendar ID from env ---
+const calendarId = process.env.GOOGLE_CALENDAR_ID;
 
-// JWT auth
+// --- JWT auth using env variables ---
 const auth = new JWT({
-  email: serviceAccount.client_email,
-  key: serviceAccount.private_key,
+  email: process.env.GOOGLE_CLIENT_EMAIL,
+  key: process.env.GOOGLE_PRIVATE_KEY.replace(/\\n/g, "\n"), // Fix line breaks
   scopes: ["https://www.googleapis.com/auth/calendar"],
 });
 
@@ -28,7 +28,7 @@ app.get("/api/booked", async (req, res) => {
   try {
     const start = new Date(req.query.start || new Date());
     const end = new Date(req.query.end || new Date());
-    end.setDate(end.getDate() + 30); // 30-day range
+    end.setDate(end.getDate() + 30);
 
     const eventsRes = await calendar.events.list({
       calendarId,
@@ -56,7 +56,6 @@ app.post("/api/book", async (req, res) => {
   const endDate = new Date(startDate.getTime() + 60 * 60 * 1000); // 1 hour
 
   try {
-    // Check conflicts
     const events = await calendar.events.list({
       calendarId,
       timeMin: startDate.toISOString(),
@@ -68,7 +67,6 @@ app.post("/api/book", async (req, res) => {
       return res.status(400).json({ error: "Time slot already booked" });
     }
 
-    // Insert event
     await calendar.events.insert({
       calendarId,
       requestBody: {

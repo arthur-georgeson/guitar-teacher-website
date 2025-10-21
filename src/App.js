@@ -17,8 +17,8 @@ export default function App() {
           <div className="container">
             {/* Navbar brand / title */}
             <Link className="navbar-brand d-flex align-items-center" to="/">
-              <i className="bi bi-music-note-beamed me-2"></i>
-              <span className="fs-3 fw-bold">Arthur's Guitar Lessons</span>
+              
+              <span className="fs-3 fw-bold">Arthur Georgeson | Guitarist & Tutor</span>
             </Link>
 
             {/* Navbar toggler for mobile */}
@@ -80,7 +80,7 @@ export default function App() {
 
       <footer className="custom-footer text-center py-3 mt-4">
 
-        <p className="mb-0">© {new Date().getFullYear()} Arthur’s Guitar Lessons</p>
+        <p className="mb-0">© {new Date().getFullYear()} Arthur Georgeson | Guitarist & Tutor</p>
       </footer>
     </div>
   );

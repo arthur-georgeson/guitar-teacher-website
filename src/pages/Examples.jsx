@@ -17,9 +17,12 @@ export default function Examples() {
 
   return (
     <div className="examples container py-5">
-      <h2 className="text-center fw-bold mb-4 display-6">Guitar Examples</h2>
+       <h2 className="text-center fw-bold mb-4 display-6">
+        Guitar Performances
+      </h2>
       <p className="text-center lead mb-5">
-        Here are some of my performances in tracks by <strong>The Middle People</strong>
+        A few examples of my guitar work featured in tracks by <strong>The Middle People</strong>.
+       
       </p>
 
       <div className="row g-4">

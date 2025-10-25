@@ -84,12 +84,15 @@ app.post("/api/book", async (req, res) => {
   }
 });
 
-app.listen(PORT, () => console.log(`Server running at http://localhost:${PORT}`));
 const path = require("path");
 
-// Serve React build folder
+// Serve React build files
 app.use(express.static(path.join(__dirname, "../build")));
 
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "../build", "index.html"));
 });
+
+
+app.listen(PORT, () => console.log(`Server running at http://localhost:${PORT}`));
+

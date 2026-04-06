@@ -138,3 +138,23 @@ iframe {
 .content {
   flex: 1;
 }
+
+/* Fix navbar collapse height & spacing */
+.navbar-collapse {
+  background-color: #415E72; /* same as navbar bg */
+}
+
+.navbar-nav .nav-link {
+  color: #F3E2D4 !important;
+  margin: 0.5rem 0;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #C5B0CD !important;
+}
+
+@media (max-width: 991px) {
+  .navbar-collapse {
+    padding: 1rem;
+  }
+}

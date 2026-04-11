@@ -7,7 +7,7 @@ export default function Services() {
 
   // Common description for all packages
   const commonDescription = 
-  "Learn exactly what you want on guitar—songs, techniques, or theory. I’ll tailor each lesson to your goals and provide guidance to help you progress quickly. Plus, your first lesson is completely free!";
+  "Learn exactly what you want on guitar—songs, techniques, or theory. I’ll tailor each lesson to your goals and provide guidance to help you progress quickly. ";
 
 
   const packages = [

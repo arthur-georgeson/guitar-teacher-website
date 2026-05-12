@@ -16,11 +16,8 @@ export default function Landing() {
           {/* Left: Text Section */}
           <div className="col-md-6 mb-6 mb-md-0">
             <h1 className="landing-title">Build Confidence on the Guitar</h1>
-            <p className = "landing-intro">
-              I’m Arthur — a passionate guitarist based in Sussex.
-              I’ve been playing music for over 15 years and love helping others{" "}
-              <strong>build confidence, develop good technique,</strong> and most
-              importantly — <strong>enjoy playing!</strong>
+            <p className="landing-intro">
+            I’m Arthur — a guitarist based in Sussex. I’ve been playing for over 10 years and focus on helping beginners get comfortable with the basics, build solid technique, and actually enjoy practicing from the start.
             </p>
 
             <p className="landing-intro"
